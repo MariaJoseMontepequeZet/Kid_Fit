@@ -1,0 +1,783 @@
+# Desarrollo rápido de aplicaciones Flutter con IA desde la nube
+
+# Capítulo 2 — Crear una aplicación Flutter completa utilizando Gemini
+
+## Objetivos
+
+Al finalizar este capítulo el estudiante será capaz de:
+
+* Utilizar Gemini como asistente de desarrollo Flutter.
+* Crear una aplicación desde una descripción escrita.
+* Generar estructuras de carpetas con IA.
+* Crear interfaces Flutter mediante prompts.
+* Solicitar modificaciones y mejoras al código generado.
+* Comprender un flujo de desarrollo basado en IA.
+* Preparar una aplicación inicial para conectar con Firebase.
+
+---
+
+# 1. Introducción
+
+En el capítulo anterior preparamos el entorno:
+
+```text
+Cuenta Google
+
+↓
+
+Firebase
+
+↓
+
+Firebase Studio
+
+↓
+
+Gemini disponible
+```
+
+Ahora comenzaremos la parte práctica:
+
+Crear una aplicación Flutter utilizando Inteligencia Artificial.
+
+El objetivo no es escribir todo el código manualmente.
+
+El flujo será:
+
+```text
+Idea
+
+↓
+
+Prompt para Gemini
+
+↓
+
+Código generado
+
+↓
+
+Revisión
+
+↓
+
+Pruebas
+
+↓
+
+Mejoras
+```
+
+La IA acelerará el proceso, pero el estudiante seguirá tomando las decisiones del proyecto.
+
+---
+
+# 2. Cómo piensa un desarrollador antes de pedir código a la IA
+
+Un error común es abrir Gemini y escribir:
+
+```text
+Crea una aplicación.
+```
+
+La respuesta será muy general.
+
+Antes de utilizar IA debemos definir:
+
+* Qué aplicación queremos crear.
+* Qué usuarios tendrá.
+* Qué pantallas necesita.
+* Qué información manejará.
+* Qué funciones tendrá.
+
+---
+
+Ejemplo:
+
+Queremos crear:
+
+```text
+Aplicación educativa para niños
+```
+
+Definimos:
+
+Usuarios:
+
+```text
+Niños de 8 a 12 años
+```
+
+Funciones:
+
+```text
+Login
+
+Perfil
+
+Cursos
+
+Progreso
+
+Recompensas
+```
+
+Tecnología:
+
+```text
+Flutter
+
+Firebase
+
+Gemini
+```
+
+Ahora Gemini tiene contexto.
+
+---
+
+# 3. Crear el primer prompt profesional
+
+Dentro de Firebase Studio abrimos Gemini.
+
+Escribimos:
+
+```text
+Quiero crear una aplicación Flutter educativa.
+
+Características:
+
+- Usuarios mediante Firebase Authentication.
+- Perfil de estudiante.
+- Cursos disponibles.
+- Seguimiento de progreso.
+- Diseño moderno utilizando Material 3.
+
+Genera una estructura profesional del proyecto.
+
+Explica la organización de carpetas.
+```
+
+---
+
+Gemini puede responder creando una estructura similar:
+
+```text
+lib
+
+├── main.dart
+
+├── models
+
+├── screens
+
+├── widgets
+
+├── services
+
+├── providers
+
+└── utils
+```
+
+---
+
+# 4. Entender la estructura generada
+
+Aunque utilizamos IA, debemos comprender qué creó.
+
+---
+
+## main.dart
+
+Archivo principal.
+
+Ejemplo:
+
+```text
+Inicia la aplicación
+
+Configura temas
+
+Carga configuración inicial
+```
+
+---
+
+## screens
+
+Contiene pantallas.
+
+Ejemplo:
+
+```text
+login_screen.dart
+
+home_screen.dart
+
+profile_screen.dart
+```
+
+---
+
+## widgets
+
+Componentes reutilizables.
+
+Ejemplo:
+
+```text
+botones
+
+tarjetas
+
+menús
+
+componentes visuales
+```
+
+---
+
+## models
+
+Representa información.
+
+Ejemplo:
+
+```text
+Usuario
+
+Curso
+
+Progreso
+```
+
+---
+
+## services
+
+Comunicación con servicios externos.
+
+Ejemplo:
+
+```text
+Firebase
+
+APIs
+
+IA
+```
+
+---
+
+# 5. Crear la primera pantalla con Gemini
+
+Ahora pediremos una pantalla.
+
+Prompt:
+
+```text
+Crea una pantalla principal Flutter.
+
+Requisitos:
+
+- Material 3.
+- Diseño moderno.
+- Barra superior.
+- Tarjetas de cursos.
+- Indicador de progreso.
+- Código limpio.
+- Responsive.
+```
+
+---
+
+Gemini generará:
+
+* Código Dart.
+* Widgets.
+* Diseño visual.
+
+---
+
+Ejemplo conceptual:
+
+```text
+HomeScreen
+
+|
+
+├── AppBar
+
+├── WelcomeCard
+
+├── CourseCard
+
+└── ProgressCard
+```
+
+---
+
+# 6. Cómo pedir mejoras a Gemini
+
+Una ventaja importante de trabajar con IA es poder iterar.
+
+No necesitamos crear todo nuevamente.
+
+Ejemplo:
+
+Primera versión:
+
+```text
+Crea una pantalla de cursos.
+```
+
+Después:
+
+```text
+Mejora el diseño.
+
+Agrega:
+
+- Animaciones suaves.
+- Mejor separación visual.
+- Iconos.
+- Diseño para niños.
+```
+
+---
+
+Después:
+
+```text
+Optimiza el código.
+
+Utiliza widgets reutilizables.
+```
+
+---
+
+La aplicación mejora progresivamente.
+
+---
+
+# 7. Crear navegación entre pantallas
+
+Una aplicación real necesita moverse entre pantallas.
+
+Solicitamos:
+
+```text
+Agrega navegación Flutter.
+
+Necesito:
+
+- Login.
+- Inicio.
+- Perfil.
+- Cursos.
+
+Utiliza una estructura organizada.
+```
+
+---
+
+Gemini puede generar:
+
+```text
+Login
+
+↓
+
+Home
+
+↓
+
+Courses
+
+↓
+
+Profile
+```
+
+---
+
+# 8. Crear formularios utilizando IA
+
+Ejemplo:
+
+Necesitamos registro de usuario.
+
+Prompt:
+
+```text
+Crea un formulario de registro Flutter.
+
+Campos:
+
+- Nombre.
+- Correo.
+- Contraseña.
+
+Incluye:
+
+- Validaciones.
+- Mensajes de error.
+- Diseño Material 3.
+```
+
+---
+
+La IA generará:
+
+* TextFields.
+* Validadores.
+* Botón.
+* Manejo básico de errores.
+
+---
+
+# 9. Generar modelos de datos con IA
+
+La IA también puede ayudarnos a diseñar estructuras.
+
+Ejemplo:
+
+Prompt:
+
+```text
+Crea un modelo Dart para un estudiante.
+
+Debe incluir:
+
+- id.
+- nombre.
+- correo.
+- progreso.
+- cursos completados.
+```
+
+---
+
+Resultado esperado:
+
+```text
+Student
+
+├── id
+
+├── name
+
+├── email
+
+├── progress
+
+└── completedCourses
+```
+
+---
+
+# 10. Crear una base inicial preparada para Firebase
+
+Aunque Firebase se verá en profundidad en el siguiente capítulo, debemos preparar la aplicación.
+
+Prompt:
+
+```text
+Prepara la arquitectura Flutter
+para conectar posteriormente Firebase.
+
+Incluye:
+
+- Servicios separados.
+- Modelos.
+- Manejo de usuarios.
+- Estructura escalable.
+```
+
+---
+
+Resultado:
+
+```text
+lib
+
+├── firebase
+
+├── services
+
+├── models
+
+├── screens
+
+└── widgets
+```
+
+---
+
+# 11. Corregir errores utilizando Gemini
+
+Una de las funciones más importantes.
+
+Cuando aparece un error:
+
+No escribir solamente:
+
+```text
+Arregla esto.
+```
+
+Mejor:
+
+```text
+Estoy desarrollando una aplicación Flutter.
+
+Tengo este error:
+
+[pegar error completo]
+
+Explícame:
+
+1. Qué significa.
+2. Por qué ocurre.
+3. Cómo solucionarlo.
+4. Código corregido.
+```
+
+---
+
+Ejemplo:
+
+Error:
+
+```text
+Null check operator used on a null value
+```
+
+Gemini puede explicar:
+
+* Qué variable es nula.
+* Dónde ocurre.
+* Cómo prevenirlo.
+
+---
+
+# 12. Trabajar por módulos con IA
+
+Una aplicación completa no debe generarse de una sola vez.
+
+El flujo recomendado:
+
+## Paso 1
+
+Crear estructura:
+
+```text
+Proyecto Flutter
+```
+
+---
+
+## Paso 2
+
+Crear autenticación:
+
+```text
+Login
+
+Registro
+
+Perfil
+```
+
+---
+
+## Paso 3
+
+Crear contenido:
+
+```text
+Cursos
+
+Progreso
+
+Dashboard
+```
+
+---
+
+## Paso 4
+
+Conectar Firebase:
+
+```text
+Usuarios
+
+Base de datos
+
+Archivos
+```
+
+---
+
+## Paso 5
+
+Agregar IA:
+
+```text
+Chat
+
+Recomendaciones
+
+Generación de contenido
+```
+
+---
+
+# 13. Crear un proyecto usando un prompt completo
+
+Ejemplo de prompt profesional:
+
+```text
+Actúa como un arquitecto Flutter senior.
+
+Necesito crear una aplicación educativa móvil.
+
+Tecnologías:
+
+- Flutter.
+- Dart.
+- Firebase.
+- Material 3.
+
+Características:
+
+- Registro de usuarios.
+- Perfil.
+- Cursos.
+- Sistema de progreso.
+- Recompensas.
+- Diseño amigable para niños.
+
+Primero genera:
+
+1. Arquitectura del proyecto.
+2. Estructura de carpetas.
+3. Modelos.
+4. Pantallas necesarias.
+
+No generes todo el código todavía.
+```
+
+---
+
+Este tipo de instrucciones produce mejores resultados.
+
+---
+
+# 14. Buenas prácticas usando Gemini
+
+## No pedir todo de una vez
+
+Incorrecto:
+
+```text
+Crea una aplicación completa con 50 funciones.
+```
+
+---
+
+Correcto:
+
+```text
+Crea primero la autenticación.
+```
+
+Luego:
+
+```text
+Ahora crea el dashboard.
+```
+
+---
+
+## Revisar siempre
+
+Preguntar:
+
+```text
+Explícame este archivo.
+```
+
+---
+
+## Mantener organización
+
+No permitir que Gemini cree archivos sin estructura.
+
+---
+
+# 15. Resultado del capítulo
+
+Al finalizar este capítulo el estudiante tendrá:
+
+```text
+Proyecto Flutter creado
+
+↓
+
+Estructura organizada
+
+↓
+
+Pantallas generadas con IA
+
+↓
+
+Navegación creada
+
+↓
+
+Modelos definidos
+
+↓
+
+Aplicación lista para Firebase
+```
+
+---
+
+# Resumen
+
+En este capítulo aprendimos a utilizar Gemini como un asistente de desarrollo Flutter.
+
+El proceso moderno es:
+
+```text
+Idea
+
+↓
+
+Descripción con lenguaje natural
+
+↓
+
+Gemini genera propuesta
+
+↓
+
+Desarrollador revisa
+
+↓
+
+Aplicación mejora
+```
+
+La Inteligencia Artificial permite crear rápidamente interfaces, estructuras y código, pero el desarrollador debe dirigir el proceso.
+
+En el siguiente capítulo conectaremos la aplicación creada con Firebase para agregar:
+
+* Usuarios.
+* Base de datos.
+* Almacenamiento.
+* Servicios reales de aplicación.
